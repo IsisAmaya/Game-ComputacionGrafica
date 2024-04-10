@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ComputacionGrafica.sln"
+    "dotnet.defaultSolution": "Game-ComputacionGrafica.sln"
 }
