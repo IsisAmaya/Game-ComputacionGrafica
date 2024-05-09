@@ -13,15 +13,13 @@ public class CubeMovement : MonoBehaviour
     public float timeStart = 20;
     private float xMin;
     private float xMax;
-
-    Vector3 direction = Vector3.left;
+    Vector3 direction = Vector3.zero;
     void Start()
     {
         UIManager timer  = Canva.GetComponent<UIManager>();
         timeStart =  20;
 
         Invoke("timer", timeStart);
-        Invoke("switchDirection", 10);
         
         timer.getTime(timeStart);
 
@@ -37,11 +35,6 @@ public class CubeMovement : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void switchDirection()
-    {
-        direction = Vector3.right;
-    }
-
     void checking()
     {
         Camera gameCamera = Camera.main;
@@ -49,13 +42,14 @@ public class CubeMovement : MonoBehaviour
         xMax = gameCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, distanceToCamera)).x;
         xMin = gameCamera.ScreenToWorldPoint(new Vector3(0, 0, distanceToCamera)).x;
 
+
         if (transform.position.x > xMax)
         {
-            direction = Vector3.left;
+            direction = Vector3.back;
         }
         if (transform.position.x < xMin)
         {
-            direction = Vector3.right;
+            direction = Vector3.forward;
         }
     }
 }

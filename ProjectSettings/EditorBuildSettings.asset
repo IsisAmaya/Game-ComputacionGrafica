@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: fb71631798c4e634a9407eed51ace6d9
+  - enabled: 1
+    path: Assets/Scenes/DuckSeason.unity
+    guid: 553d5968eabbbef48bf7036c920429c3
   m_configObjects: {}
