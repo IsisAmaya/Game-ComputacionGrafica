@@ -7,6 +7,8 @@ using UnityEngine.SocialPlatforms.Impl;
 public class MousePosition : MonoBehaviour
 {
     public GameObject player;
+    public Vector3 screenPosition;
+    public Vector3 worldPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,42 +18,35 @@ public class MousePosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        position();
-        hor();
+
+        screenPosition = Input.mousePosition;
+
+        Ray ray= Camera.main.ScreenPointToRay(screenPosition);
+
+        transform.position = worldPosition;  
+
+        shoot(ray);
     }
 
-    void position()
+    private void shoot(Ray ray)
     {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 10;
-        Vector3 objectPos = Camera.main.ScreenToWorldPoint(mousePos);
-        transform.position = objectPos;
-
-    }
-
-    void hor()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
-    }
-
-    private void Shoot()
-    {
-
         RaycastHit hit;
-        Ray ray = new Ray(transform.position, transform.forward);
-        if (Physics.Raycast(ray, out hit))
-        {
-            Transform objectHit = hit.transform;
-            HitBoxCube hitBoxCube = objectHit.GetComponent<HitBoxCube>();
-            Player score  = player.GetComponent<Player>();
-            if (hitBoxCube != null)
+        
+        // Dibujar el rayo para depuración
+        Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 1f);
+        
+        if (Input.GetMouseButtonDown(0)) {
+            if (Physics.Raycast(ray, out hit))
             {
-                hitBoxCube.golpe();
-                score.addScore(1);
-            }
+                Transform objectHit = hit.transform;
+                HitBoxCube hitBoxCube = objectHit.GetComponent<HitBoxCube>();
+                Player score  = player.GetComponent<Player>();
+                if (hitBoxCube != null)
+                {
+                    hitBoxCube.golpe();
+                    score.addScore(1);
+                }
+            }            
         }
     }
 }
