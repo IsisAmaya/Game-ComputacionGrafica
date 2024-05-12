@@ -3161,13 +3161,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2511566, y: 0.57721287, z: 0.09983746, w: 0.77057004}
-  m_LocalPosition: {x: -472, y: 128, z: 7}
+  m_LocalRotation: {x: 0.33956203, y: -0.1260788, z: -0.09032771, w: 0.9277083}
+  m_LocalPosition: {x: 151.92, y: 228.3, z: 85.13}
   m_LocalScale: {x: 0.54745, y: 0.54745, z: 0.54745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 15.772, y: 77.549, z: 27.463}
+  m_LocalEulerAnglesHint: {x: 37.391, y: -21.817, z: -18.585}
 --- !u!4 &710987101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1621991540713508019, guid: c8134dd87be4906419f13922ddc5bf4f, type: 3}
@@ -8003,7 +8003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab045c9b3266666428c206b2e2e74604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture1: {fileID: 2800000, guid: b8af034571020f34fb861bd26b5ff4f7, type: 3}
+  cursorTexture1: {fileID: 2800000, guid: a868bd01f272a2b4db894bb63332b6be, type: 3}
   cursorTexture2: {fileID: 2800000, guid: 09efe47efd84d7149acaf67fe2022a3f, type: 3}
 --- !u!4 &1651785671 stripped
 Transform:

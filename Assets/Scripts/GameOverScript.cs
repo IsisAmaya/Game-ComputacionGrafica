@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameOverScript : MonoBehaviour
 {
-
+    private string previousSceneName;
     public TextMeshProUGUI pointsText;
     void Start()
     {   
