@@ -8,31 +8,15 @@ using UnityEngine;
 
 public class CubeMovement : MonoBehaviour
 {
-    public GameObject Canva;
+    
     public float speed = 5.0f;
-    public float timeStart = 20;
     private float xMin;
     private float xMax;
     Vector3 direction = Vector3.zero;
-    void Start()
-    {
-        UIManager timer  = Canva.GetComponent<UIManager>();
-        timeStart =  20;
-
-        Invoke("timer", timeStart);
-        
-        timer.getTime(timeStart);
-
-    }
     void Update()
     {
         checking();
         transform.Translate(direction * Time.deltaTime * speed);
-    }
-
-    void timer()
-    {
-        Destroy(gameObject);
     }
 
     void checking()

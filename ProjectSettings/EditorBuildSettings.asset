@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DuckSeason.unity
     guid: 553d5968eabbbef48bf7036c920429c3
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 8c48e78ac76eb9a4ba058bb2102f2e86
   m_configObjects: {}

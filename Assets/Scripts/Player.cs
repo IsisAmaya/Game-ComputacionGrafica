@@ -1,22 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour
 {
+    public GameObject Canva;
+    public float timeStart = 20;
     public GameObject text;
     private int score;
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        UIManager timer  = Canva.GetComponent<UIManager>();
+        timeStart =  20;
 
-    // Update is called once per frame
-    void Update()
-    {
+        Invoke("timer", timeStart);
         
+        timer.getTime(timeStart);
+
     }
     public void addScore(int points) {
         UIManager textScore  = text.GetComponent<UIManager>();
