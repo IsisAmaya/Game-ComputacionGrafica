@@ -7,13 +7,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public GameObject Canva;
-    public float timeStart = 20;
+    public float timeStart = 0;
     public GameObject text;
     private int score;
     void Start()
     {
         UIManager timer  = Canva.GetComponent<UIManager>();
-        timeStart =  20;
 
         Invoke("timer", timeStart);
         

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CursorManager : MonoBehaviour
@@ -14,9 +15,10 @@ public class CursorManager : MonoBehaviour
 
     void SetCursor()
     {
+        string[] levels = {"DuckSeason", "Level-1", "Level-2", "Level-3", "Level-4", "Level-5"};
         string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
-        if (sceneName == "DuckSeason")
+        if (System.Array.Exists(levels, element => element == sceneName))
         {
             Cursor.SetCursor(cursorTexture1, Vector2.zero, CursorMode.Auto);
         }
