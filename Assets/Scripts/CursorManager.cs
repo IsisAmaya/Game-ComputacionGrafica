@@ -22,7 +22,7 @@ public class CursorManager : MonoBehaviour
         {
             Cursor.SetCursor(cursorTexture1, Vector2.zero, CursorMode.Auto);
         }
-        else if (sceneName == "MainMenu" || sceneName == "GameOver")
+        else if (sceneName == "MainMenu" || sceneName == "GameOver" || sceneName == "Win" || sceneName == "Levels")
         {
             Cursor.SetCursor(cursorTexture2, Vector2.zero, CursorMode.Auto);
         }

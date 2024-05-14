@@ -9,8 +9,29 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fb71631798c4e634a9407eed51ace6d9
   - enabled: 1
+    path: Assets/Scenes/Levels.unity
+    guid: 827c4c1fb85a06f498e0c62c27c80be7
+  - enabled: 1
+    path: Assets/Scenes/Level-1.unity
+    guid: 3cf9d20ce1756014bb62dc9baabc8eaf
+  - enabled: 1
+    path: Assets/Scenes/Level-2.unity
+    guid: a048a0f7df762eb469f9de5ecd3425b6
+  - enabled: 1
+    path: Assets/Scenes/Level-3.unity
+    guid: aeb594999a1c64842b8579f1a43f100d
+  - enabled: 1
+    path: Assets/Scenes/Level-4.unity
+    guid: 3e0b92a9332d3ad4f83a0455710cdc75
+  - enabled: 1
+    path: Assets/Scenes/Level-5.unity
+    guid: 1b1192ed192b40a43a7c3e20a81494eb
+  - enabled: 1
     path: Assets/Scenes/DuckSeason.unity
     guid: 553d5968eabbbef48bf7036c920429c3
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: e89d84c218a025143acdef9b2d5116a5
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 8c48e78ac76eb9a4ba058bb2102f2e86

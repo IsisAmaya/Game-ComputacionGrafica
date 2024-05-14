@@ -9,7 +9,10 @@ public class MousePosition : MonoBehaviour
     public GameObject player;
     public Vector3 screenPosition;
     public Vector3 worldPosition;
-    // Start is called before the first frame update
+
+    public float shootCooldown = 1f; // Tiempo de reutilización en segundos
+    private float nextShootTime = 0f;
+
     void Start()
     {
 
@@ -30,12 +33,17 @@ public class MousePosition : MonoBehaviour
 
     private void shoot(Ray ray)
     {
-        RaycastHit hit;
-        
-        // Dibujar el rayo para depuración
-        Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 1f);
-        
+        if (Time.time < nextShootTime){
+            return; 
+        }
+
         if (Input.GetMouseButtonDown(0)) {
+            nextShootTime = Time.time + shootCooldown; 
+            Debug.Log(nextShootTime);
+
+
+            RaycastHit hit;
+
             if (Physics.Raycast(ray, out hit))
             {
                 Transform objectHit = hit.transform;

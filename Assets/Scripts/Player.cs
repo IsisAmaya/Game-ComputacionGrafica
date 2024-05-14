@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
         
         timer.getTime(timeStart);
 
+        Scene scene = SceneManager.GetActiveScene();
+
+        PlayerPrefs.SetString("previuScene", scene.name);
+        PlayerPrefs.Save();
+
     }
     public void addScore(int points) {
         UIManager textScore  = text.GetComponent<UIManager>();

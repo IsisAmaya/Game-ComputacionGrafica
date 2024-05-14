@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Text scoreText;
     [SerializeField]
-    public int maxScore;
+    private int maxScore;
     [SerializeField]
     private Text timeText;
 
@@ -31,6 +31,9 @@ public class UIManager : MonoBehaviour
         timeText.text = "Time: " + Math.Round(timeStart).ToString();
         if (Math.Round(timeStart) <= 0) {
             SceneManager.LoadScene("GameOver");
+        }
+        if (maxScore == PlayerPrefs.GetInt("PlayerScore")) {
+            SceneManager.LoadScene("Win");
         }
     }
 

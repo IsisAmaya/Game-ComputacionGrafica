@@ -3100,7 +3100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeStart: 0
   scoreText: {fileID: 735698169}
-  maxScore: 0
+  maxScore: 20
   timeText: {fileID: 653368711}
 --- !u!114 &609699633
 MonoBehaviour:

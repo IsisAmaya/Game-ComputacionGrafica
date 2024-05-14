@@ -1341,7 +1341,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1728215654}
         m_TargetAssemblyTypeName: GameOverScript, Assembly-CSharp
-        m_MethodName: RestartButton
+        m_MethodName: restartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

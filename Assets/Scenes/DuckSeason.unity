@@ -8040,7 +8040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canva: {fileID: 609699631}
-  timeStart: 20
+  timeStart: 5
   text: {fileID: 609699631}
 --- !u!136 &1642742492
 CapsuleCollider:
