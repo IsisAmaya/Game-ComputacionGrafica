@@ -10,6 +10,7 @@ public class MousePosition : MonoBehaviour
     public Vector3 screenPosition;
     public Vector3 worldPosition;
 
+    public bool powerup = false;
     public float shootCooldown = 1f; // Tiempo de reutilización en segundos
     private float nextShootTime = 0f;
 
@@ -24,21 +25,23 @@ public class MousePosition : MonoBehaviour
 
         screenPosition = Input.mousePosition;
 
-        Ray ray= Camera.main.ScreenPointToRay(screenPosition);
+        Ray ray = Camera.main.ScreenPointToRay(screenPosition);
 
-        transform.position = worldPosition;  
+        transform.position = worldPosition;
 
         shoot(ray);
     }
 
     private void shoot(Ray ray)
     {
-        if (Time.time < nextShootTime){
-            return; 
+        if (Time.time < nextShootTime)
+        {
+            return;
         }
 
-        if (Input.GetMouseButtonDown(0)) {
-            nextShootTime = Time.time + shootCooldown; 
+        if (Input.GetMouseButtonDown(0))
+        {
+            nextShootTime = Time.time + shootCooldown;
             Debug.Log(nextShootTime);
 
 
@@ -48,13 +51,19 @@ public class MousePosition : MonoBehaviour
             {
                 Transform objectHit = hit.transform;
                 HitBoxCube hitBoxCube = objectHit.GetComponent<HitBoxCube>();
-                Player score  = player.GetComponent<Player>();
+                ItemHitBox itemHitBox = objectHit.GetComponent<ItemHitBox>();
+                Player score = player.GetComponent<Player>();
                 if (hitBoxCube != null)
                 {
                     hitBoxCube.golpe();
                     score.addScore(1);
                 }
-            }            
+
+                if (itemHitBox != null)
+                {
+                    itemHitBox.powerup();
+                }
+            }
         }
     }
 }
