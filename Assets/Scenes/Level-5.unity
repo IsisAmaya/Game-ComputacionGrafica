@@ -4931,6 +4931,7 @@ MonoBehaviour:
   player: {fileID: 1642742490}
   screenPosition: {x: 0, y: 0, z: 0}
   worldPosition: {x: 0, y: 0, z: 0}
+  shootCooldown: 0.7
 --- !u!1001 &965920750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8599,7 +8600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab045c9b3266666428c206b2e2e74604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture1: {fileID: 2800000, guid: a868bd01f272a2b4db894bb63332b6be, type: 3}
+  cursorTexture1: {fileID: 2800000, guid: 8c89ed5746a4faa48bb97701cc2f2e35, type: 3}
   cursorTexture2: {fileID: 2800000, guid: 09efe47efd84d7149acaf67fe2022a3f, type: 3}
 --- !u!4 &1651785671 stripped
 Transform:
